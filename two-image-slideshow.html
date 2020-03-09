@@ -1,0 +1,59 @@
+<style>
+.showContainer {
+  width: 100%;
+  height: 27vw;
+  max-height: 370px;
+  position: relative;
+}
+
+.slide {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+}
+
+.slide-img {
+  display: inline-block;
+  width: 49%;
+  height: auto;
+}
+
+</style>
+
+<div class="showContainer">
+  <div class="slide">
+    <img class="slide-img" src="" alt="">
+	<img class="slide-img" src="" alt="">
+  </div>
+  <div class="slide">
+    <img class="slide-img" src="" alt="">
+	<img class="slide-img" src="" alt="">
+  </div>
+  <div class="slide">
+    <img class="slide-img" src="" alt="">
+	<img class="slide-img" src="" alt="">
+  </div>
+  <div class="slide">
+    <img class="slide-img" src="" alt="">
+	<img class="slide-img" src="" alt="">
+  </div>
+</div>
+
+<script>
+let counter = 0;
+let slide = document.querySelectorAll('.slide');
+
+function slideShow() {
+  for (i = 0; i < slide.length; i++) {slide[i].style.opacity = '0';}
+  slide[counter].style.opacity = '1';
+  counter++; 
+  if (counter == slide.length) {counter = 0;} 
+  setTimeout(slideShow, 5000);
+}
+
+slideShow();
+
+</script>
