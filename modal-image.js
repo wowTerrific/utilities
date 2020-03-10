@@ -1,3 +1,5 @@
+//Change variable below in order to select a specific div, or all img tags will be selected. 
+//Animations must be added via CSS & adding classes to below nodes
 var aArr = Array.from(document.getElementsByTagName("img"));
 
 aArr.map(
